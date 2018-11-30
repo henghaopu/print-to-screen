@@ -1,0 +1,20 @@
+article > header {
+    font-family: 'Open Sans', sans-serif;
+}
+
+article > header > h1 {
+    font-weight: 800;
+}
+
+article > header > p:last-child > span{
+    font-weight: 700;
+}
+
+article > p {
+    font-family: 'Neuton', serif;
+    font-weight: 300;
+}
+
+footer > p {
+    font-family: 'Cinzel', serif;
+}

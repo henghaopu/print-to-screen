@@ -1,0 +1,106 @@
+article {
+    margin: 1em;
+}
+
+article > header {
+    margin-bottom: 1rem;
+}
+
+article > footer {
+    margin-top: 1rem;
+    text-align: right;
+}
+// .side-top {
+//     shape-outside: polygon(0 0,0 100%,100% 100%,0 50%,100% 0);
+//     float: left;
+//     width: 20%;
+//     height: 100vh;
+// }
+
+main {
+    position: relative;
+}
+
+figure {
+    position: absolute;
+    left: -30px;
+    // width: 200px;
+    // transform: translate(-90px);
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    // float: left;
+    // shape-outside: content-box;
+    width: 100px;
+}
+
+img:first-child {
+    transform: rotate(-15deg);
+    width: 110px;
+    margin-left: -3px;
+    // shape-outside: polygon(0px 0px, 200px 0px, 201px 30px, 263px 260px, 32px 315px, 0px 267px);
+}
+
+img:nth-child(2) {
+    transform: rotate(9.5deg);
+    width: 100px;
+    height: 300px;
+    margin-top: 10px;
+    margin-left: -3px;
+}
+
+img:nth-child(3) {
+    transform: rotate(7.5deg);
+    width: 95px;
+    margin-top: -12px;
+    margin-left: 45px;
+    
+}
+
+img:nth-child(4) {
+    transform: rotate(-11deg);
+    width: 110px;
+    height: 120px;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+
+img:nth-child(5) {
+    // position: absolute;
+    // z-index: -1;
+    width: 160px;
+    // height: 950px;
+}
+
+article > p {
+    text-indent: 14px;
+}
+
+article > p:first-of-type {
+    text-indent: 0;
+}
+
+article > p:first-of-type::first-letter {
+    font-size: 500%;
+    // initial-letter: 3;
+    float: left;
+    padding: 0 5px 0 0;
+    margin: 0 0 0 -65px;
+    line-height: 0.65em;
+}
+
+p {
+    max-width: 450px;
+}
+
+.left-shape {
+    float: left;
+    // shape-outside: polygon(44px 195px, 79px 199px, 37px 438px, 116px 447px, 95px 574px, 63px 569px, 94px 699px, 4px 698px, 0px 3px, 49px 0px, 94px 156px, 44px 169px);    
+    shape-outside: polygon(42px 157px, 85px 160px, 58px 324px, 58px 433px, 114px 439px, 94px 586px, 72px 583px, 92px 692px, 4px 709px, 0px 3px, 54px 1px, 88px 135px, 42px 148px);
+    // background: red;
+    // height: 750px;
+    height: 200vh;
+    width: 150px;
+}
