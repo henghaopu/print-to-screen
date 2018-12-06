@@ -10,6 +10,11 @@ article > footer {
     margin-top: 1rem;
     text-align: right;
 }
+
+article > footer > p {
+    letter-spacing: 2px;
+}
+
 // .side-top {
 //     shape-outside: polygon(0 0,0 100%,100% 100%,0 50%,100% 0);
 //     float: left;
@@ -21,11 +26,18 @@ main {
     position: relative;
 }
 
-figure {
+main > figure:nth-child(2) {
     position: absolute;
     left: -30px;
     // width: 200px;
     // transform: translate(-90px);
+}
+
+main > figure:first-child {
+    display: none;
+    position: absolute;
+    left: -10px;
+    top: -20px;
 }
 
 img {
@@ -36,46 +48,68 @@ img {
     width: 100px;
 }
 
-img:first-child {
-    transform: rotate(-15deg);
-    width: 110px;
-    margin-left: -3px;
+main > figure:nth-child(2) > img:first-child {
+    transform: rotate(-12deg);
+    width: 100px;
+    height: 180px;
+    margin-left: 9px;
     // shape-outside: polygon(0px 0px, 200px 0px, 201px 30px, 263px 260px, 32px 315px, 0px 267px);
 }
 
 img:nth-child(2) {
     transform: rotate(9.5deg);
     width: 100px;
-    height: 300px;
-    margin-top: 10px;
+    height: 350px;
+    margin-top: 1px;
     margin-left: -3px;
 }
 
-img:nth-child(3) {
+img:nth-child(4) {
     transform: rotate(7.5deg);
-    width: 95px;
-    margin-top: -12px;
-    margin-left: 45px;
-    
+    width: 130px;
+    height: 100px;
+    margin-top: -300px;
+    margin-left: 33px;
 }
 
-img:nth-child(4) {
-    transform: rotate(-11deg);
-    width: 110px;
-    height: 120px;
-    margin-top: 5px;
-    margin-left: 8px;
+img:nth-child(3) {
+    transform: rotate(-10deg);
+    width: 120px;
+    height: 220px;
+    margin-top: 1px;
+    margin-left: 4px;
 }
 
 img:nth-child(5) {
-    // position: absolute;
-    // z-index: -1;
-    width: 160px;
+    position: absolute;
+    z-index: -1;
+    width: 140px;
+    height: 195px;
+    margin-top: 190px;
+    margin-left: -14px;
     // height: 950px;
+    transform: rotate(10deg);
 }
 
+@media screen and (min-width: 375px) {
+    main {
+        width: 375px;
+        margin: 0 auto;
+    }
+
+    img:nth-child(5) {
+        height: 210px;
+    }
+}
+
+// main > figure:nth-child(2) > img:first-child {
+//     width: 160px;
+//     margin-right: -20px;
+//     transform: rotate(10deg);
+// }
+
 article > p {
-    text-indent: 14px;
+    text-indent: 16px;
 }
 
 article > p:first-of-type {
@@ -92,15 +126,177 @@ article > p:first-of-type::first-letter {
 }
 
 p {
-    max-width: 450px;
+    max-width: 425px;
 }
 
-.left-shape {
+.left-shape-shim {
     float: left;
     // shape-outside: polygon(44px 195px, 79px 199px, 37px 438px, 116px 447px, 95px 574px, 63px 569px, 94px 699px, 4px 698px, 0px 3px, 49px 0px, 94px 156px, 44px 169px);    
-    shape-outside: polygon(42px 157px, 85px 160px, 58px 324px, 58px 433px, 114px 439px, 94px 586px, 72px 583px, 92px 692px, 4px 709px, 0px 3px, 54px 1px, 88px 135px, 42px 148px);
+    // shape-outside: polygon(42px 157px, 85px 160px, 58px 324px, 58px 433px, 114px 439px, 94px 586px, 72px 583px, 92px 692px, 4px 709px, 0px 3px, 54px 1px, 88px 135px, 42px 148px);
+    // shape-outside: polygon(57px 182px, 93px 187px, 52px 439px, 140px 451px, 125px 561px, 99px 560px, 129px 745px, -6px 769px, 1px -10px, 56px -11px, 95px 174px);
+    // shape-outside: polygon(57px 182px, 93px 187px, 52px 439px, 140px 451px, 125px 561px, 100px 561px, 132px 748px, -8px 774px, 1px -10px, 57px -12px, 95px 174px);
+    // shape-outside: polygon(57px 182px, 93px 187px, 52px 439px, 140px 451px, 125px 561px, 100px 561px, 132px 748px, 112px 752px, 147px 939px, -8px 967px, 1px -10px, 57px -12px, 95px 174px);
+    // shape-outside: polygon(57px 182px, 93px 187px, 52px 439px, 140px 451px, 125px 561px, 100px 561px, 131px 750px, -4px 774px, 1px -10px, 57px -12px, 95px 174px);
+    // shape-outside: polygon(57px 182px, 93px 187px, 52px 439px, 140px 451px, 125px 561px, 100px 561px, 131px 750px, 94px 956px, -4px 957px, 1px -10px, 57px -12px, 95px 174px);
+    // shape-outside: polygon(57px 182px, 91px 189px, 49px 435px, 140px 448px, 124px 562px, 81px 562px, 111px 746px, 76px 941px, 1px 941px, 1px -10px, 55px -12px, 92px 171px);
+    // shape-outside: polygon(57px 182px, 87px 191px, 45px 445px, 134px 447px, 118px 564px, 73px 560px, 104px 746px, 66px 951px, -2px 949px, 1px -10px, 52px -11px, 89px 172px);
+    // shape-outside: polygon(57px 182px, 90px 192px, 47px 446px, 135px 448px, 118px 563px, 76px 563px, 110px 748px, 70px 963px, -2px 949px, 1px -10px, 52px -11px, 89px 172px);
+    shape-outside: polygon(57px 182px, 90px 192px, 47px 457px, 134px 462px, 119px 560px, 77px 556px, 111px 749px, 75px 951px, -2px 949px, 1px -10px, 52px -11px, 89px 172px);
     // background: red;
     // height: 750px;
     height: 200vh;
     width: 150px;
 }
+
+// .right-shape-shim {
+//     float: right;
+//     height: 300vh;
+//     width: 150px;
+//     // shape-outside: polygon(91px 678px, 151px 679px, 150px 1067px, -35px 1069px);
+//     shape-outside: polygon(42px 712px, 163px 716px, 164px 974px, -6px 967px);
+// }
+
+@media screen and (min-width: 768px) {
+    main {
+        width: 768px;
+        margin: 0 auto;
+    }
+    p {
+        max-width: 768px;
+    }
+
+    .left-shape-shim {
+        width: 440px;
+        //shape-outside: polygon(253px 191px, 286px 201px, 243px 471px, 330px 476px, 315px 576px, 273px 572px, 307px 769px, 271px 974px, 194px 972px, 197px -4px, 248px -6px, 285px 181px);
+        // shape-outside: polygon(304px 185px, 337px 195px, 294px 465px, 381px 470px, 366px 570px, 324px 566px, 358px 763px, 322px 968px, 245px 966px, 248px -10px, 299px -12px, 336px 175px);
+        // shape-outside: polygon(345px 172px, 378px 182px, 335px 452px, 422px 457px, 407px 557px, 365px 553px, 399px 750px, 363px 955px, 286px 953px, 289px -23px, 340px -25px, 377px 162px);
+        shape-outside: polygon(341px 178px, 373px 178px, 328px 454px, 407px 460px, 384px 604px, 347px 598px, 384px 808px, 345px 1019px, 281px 1018px, 289px -23px, 340px -25px, 339px -9px, 374px 161px);
+    }
+
+    main > figure:first-child {
+        display: block;
+    }
+
+    main > figure:nth-child(2) {
+        left: 0px;
+    }
+
+    main > figure:nth-child(2) > img:first-child {
+        transform: rotate(-12deg);
+        width: 150px;
+        height: 200px;
+        margin-top: -20px;
+        margin-left: 210px;
+        // shape-outside: polygon(0px 0px, 200px 0px, 201px 30px, 263px 260px, 32px 315px, 0px 267px);
+    }
+    
+    img:nth-child(2) {
+        transform: rotate(9.5deg);
+        width: 150px;
+        height: 350px;
+        margin-top: 1px;
+        margin-left: 198px;
+    }
+    
+    img:nth-child(4) {
+        transform: rotate(9.5deg);
+        width: 180px;
+        height: 135px;
+        margin-top: -360px;
+        margin-left: 220px;
+    }
+    
+    img:nth-child(3) {
+        transform: rotate(-10deg);
+        width: 170px;
+        height: 250px;
+        margin-top: 35px;
+        margin-left: 195px;
+    }
+    
+    img:nth-child(5) {
+        position: absolute;
+        z-index: -1;
+        width: 190px;
+        height: 195px;
+        margin-top: 210px;
+        margin-left: 177px;
+        // height: 950px;
+        transform: rotate(10deg);
+    }
+
+    main > figure:first-child > img:first-child {
+        position: absolute;
+        z-index: -2;
+        width: 250px;
+        height: 1030px;
+        // height: 143vh;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        width: 1024px;
+        margin: 0 auto;
+    }
+
+    p {
+        max-width: 1024px;
+    }
+
+    .left-shape-shim {
+        width: 600px;
+        // shape-outside: polygon(341px 178px, 373px 178px, 328px 454px, 407px 460px, 384px 604px, 347px 598px, 384px 808px, 345px 1019px, 281px 1018px, 289px -23px, 340px -25px, 339px -9px, 374px 161px);
+        shape-outside: polygon(500px 188px, 532px 188px, 487px 464px, 566px 470px, 543px 614px, 506px 608px, 543px 818px, 504px 1029px, 440px 1028px, 448px -13px, 499px -15px, 498px 1px, 533px 171px);
+    }
+
+    main > figure:nth-child(2) > img:first-child {
+        transform: rotate(-12deg);
+        width: 170px;
+        height: 200px;
+        margin-top: -20px;
+        margin-left: 350px;
+        // shape-outside: polygon(0px 0px, 200px 0px, 201px 30px, 263px 260px, 32px 315px, 0px 267px);
+    }
+    
+    img:nth-child(2) {
+        transform: rotate(9.5deg);
+        width: 170px;
+        height: 350px;
+        margin-top: 1px;
+        margin-left: 340px;
+    }
+    
+    img:nth-child(4) {
+        transform: rotate(9.5deg);
+        width: 180px;
+        height: 135px;
+        margin-top: -360px;
+        margin-left: 378px;
+    }
+    
+    img:nth-child(3) {
+        transform: rotate(-10deg);
+        width: 190px;
+        height: 250px;
+        margin-top: 35px;
+        margin-left: 332px;
+    }
+    
+    img:nth-child(5) {
+        position: absolute;
+        z-index: -1;
+        width: 190px;
+        height: 195px;
+        margin-top: 210px;
+        margin-left: 337px;
+        // height: 950px;
+        transform: rotate(10deg);
+    }
+
+    main > figure:first-child > img:first-child {
+        width: 450px;
+        // height: 143vh;
+    }
+}
+
