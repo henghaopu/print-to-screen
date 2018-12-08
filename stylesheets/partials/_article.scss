@@ -43,6 +43,7 @@ main > figure:first-child {
 img {
     display: block;
     object-fit: cover;
+    // object-position: 
     // float: left;
     // shape-outside: content-box;
     width: 100px;
@@ -50,6 +51,7 @@ img {
 
 main > figure:nth-child(2) > img:first-child {
     transform: rotate(-12deg);
+    object-position: -50px 0;
     width: 100px;
     height: 180px;
     margin-left: 9px;
@@ -58,6 +60,9 @@ main > figure:nth-child(2) > img:first-child {
 
 img:nth-child(2) {
     transform: rotate(9.5deg);
+    
+    // object-position: -40px 0px;
+    // object-position: 40% 60%;
     width: 100px;
     height: 350px;
     margin-top: 1px;
@@ -74,6 +79,7 @@ img:nth-child(4) {
 
 img:nth-child(3) {
     transform: rotate(-10deg);
+    object-position: -10px 15px;
     width: 120px;
     height: 220px;
     margin-top: 1px;
@@ -89,6 +95,10 @@ img:nth-child(5) {
     margin-left: -14px;
     // height: 950px;
     transform: rotate(10deg);
+}
+
+i {
+    font-family: cursive;
 }
 
 @media screen and (min-width: 375px) {
@@ -117,7 +127,7 @@ article > p:first-of-type {
 }
 
 article > p:first-of-type::first-letter {
-    font-size: 500%;
+    font-size: 540%;
     // initial-letter: 3;
     float: left;
     padding: 0 5px 0 0;
@@ -156,6 +166,13 @@ p {
 //     shape-outside: polygon(42px 712px, 163px 716px, 164px 974px, -6px 967px);
 // }
 
+@media screen and (min-width: 425px) {
+    main {
+        width: 425px;
+        margin: 0 auto;
+    }
+}
+
 @media screen and (min-width: 768px) {
     main {
         width: 768px;
@@ -183,19 +200,19 @@ p {
 
     main > figure:nth-child(2) > img:first-child {
         transform: rotate(-12deg);
-        width: 150px;
+        width: 160px;
         height: 200px;
         margin-top: -20px;
-        margin-left: 210px;
+        margin-left: 200px;
         // shape-outside: polygon(0px 0px, 200px 0px, 201px 30px, 263px 260px, 32px 315px, 0px 267px);
     }
     
     img:nth-child(2) {
         transform: rotate(9.5deg);
-        width: 150px;
-        height: 350px;
-        margin-top: 1px;
-        margin-left: 198px;
+        width: 155px;
+        height: 360px;
+        margin-top: -12px;
+        margin-left: 193px;
     }
     
     img:nth-child(4) {
@@ -208,6 +225,7 @@ p {
     
     img:nth-child(3) {
         transform: rotate(-10deg);
+        object-position: 0 10px;
         width: 170px;
         height: 250px;
         margin-top: 35px;
@@ -216,9 +234,10 @@ p {
     
     img:nth-child(5) {
         position: absolute;
+        object-position: 0 10px;
         z-index: -1;
         width: 190px;
-        height: 195px;
+        height: 200px;
         margin-top: 210px;
         margin-left: 177px;
         // height: 950px;
@@ -251,6 +270,7 @@ p {
     }
 
     main > figure:nth-child(2) > img:first-child {
+        
         transform: rotate(-12deg);
         width: 170px;
         height: 200px;
@@ -261,30 +281,32 @@ p {
     
     img:nth-child(2) {
         transform: rotate(9.5deg);
-        width: 170px;
-        height: 350px;
-        margin-top: 1px;
-        margin-left: 340px;
+        width: 177px;
+        height: 370px;
+        margin-top: -13px;
+        margin-left: 332px;
     }
     
     img:nth-child(4) {
         transform: rotate(9.5deg);
-        width: 180px;
-        height: 135px;
-        margin-top: -360px;
-        margin-left: 378px;
+        width: 190px;
+        height: 140px;
+        margin-top: -375px;
+        margin-left: 368px;
     }
     
     img:nth-child(3) {
         transform: rotate(-10deg);
+        object-position: 0 5px;
         width: 190px;
-        height: 250px;
-        margin-top: 35px;
+        height: 260px;
+        margin-top: 40px;
         margin-left: 332px;
     }
     
     img:nth-child(5) {
         position: absolute;
+        object-position: 0 10px;
         z-index: -1;
         width: 190px;
         height: 195px;
@@ -299,4 +321,3 @@ p {
         // height: 143vh;
     }
 }
-

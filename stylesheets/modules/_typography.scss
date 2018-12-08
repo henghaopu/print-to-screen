@@ -1,11 +1,16 @@
+main > h1 {
+    position: absolute;
+    z-index: 100;
+}
+
 article > header {
     font-family: 'Open Sans', sans-serif;
 }
 
-article > header > h1 {
+article > header > h2 {
     font-weight: 800;
     // font-size: 1.4rem;
-    line-height: 1.4rem;
+    line-height: 3rem;
     margin-bottom: 0.1rem;
 }
 
@@ -34,7 +39,7 @@ footer > p {
 
 
 @media screen and (min-width: 320px) {
-    article > header > h1 {
+    article > header > h2 {
         font-size: 1.8rem;
         line-height: 1.15rem;
         letter-spacing: -2px;
@@ -53,8 +58,9 @@ footer > p {
 }
 
 @media screen and (min-width: 375px) {
-    article > header > h1 {
+    article > header > h2 {
         font-size: 2rem;
+        line-height: 1.4rem;
         // line-height: 1.2rem;
         letter-spacing: -2px;
     }
@@ -63,7 +69,7 @@ footer > p {
         margin-top: 0.5rem;
         font-size: 1.2rem;
         line-height: 1.4rem;
-        letter-spacing: -1px;
+        letter-spacing: -0.5px;
     }
 
     article > p { 
@@ -73,8 +79,9 @@ footer > p {
 }
 
 @media screen and (min-width: 425px) {
-    article > header > h1 {
+    article > header > h2 {
         font-size: 2.2rem;
+        
         // line-height: 1.4rem;
     }
 
@@ -82,7 +89,7 @@ footer > p {
         margin-top: 0.5rem;
         font-size: 1.25rem;
         line-height: 1.5rem;
-        letter-spacing: -1px;
+        letter-spacing: -0.5px;
     }
 
     article > p {  
@@ -92,7 +99,26 @@ footer > p {
 }
 
 @media screen and (min-width: 425px) { 
-    article > header > h1 {
+    article > header > h2 {
         line-height: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    article > header > h2 {
+        line-height: 1.6rem;
+    }
+
+    article > header > p { 
+        line-height: 1.6rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    article > header > h2 {
+        line-height: 1.7rem;
+    }
+    article > header > p { 
+        line-height: 1.7rem;
     }
 }

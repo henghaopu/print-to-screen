@@ -1,10 +1,15 @@
+main > h1 {
+  position: absolute;
+  z-index: 100;
+}
+
 article > header {
   font-family: 'Open Sans', sans-serif;
 }
 
-article > header > h1 {
+article > header > h2 {
   font-weight: 800;
-  line-height: 1.4rem;
+  line-height: 3rem;
   margin-bottom: 0.1rem;
 }
 
@@ -32,7 +37,7 @@ footer > p {
 }
 
 @media screen and (min-width: 320px) {
-  article > header > h1 {
+  article > header > h2 {
     font-size: 1.8rem;
     line-height: 1.15rem;
     letter-spacing: -2px;
@@ -49,15 +54,16 @@ footer > p {
 }
 
 @media screen and (min-width: 375px) {
-  article > header > h1 {
+  article > header > h2 {
     font-size: 2rem;
+    line-height: 1.4rem;
     letter-spacing: -2px;
   }
   article > header > p {
     margin-top: 0.5rem;
     font-size: 1.2rem;
     line-height: 1.4rem;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
   }
   article > p {
     font-size: 1.1rem;
@@ -66,14 +72,14 @@ footer > p {
 }
 
 @media screen and (min-width: 425px) {
-  article > header > h1 {
+  article > header > h2 {
     font-size: 2.2rem;
   }
   article > header > p {
     margin-top: 0.5rem;
     font-size: 1.25rem;
     line-height: 1.5rem;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
   }
   article > p {
     font-size: 1.2rem;
@@ -82,8 +88,26 @@ footer > p {
 }
 
 @media screen and (min-width: 425px) {
-  article > header > h1 {
+  article > header > h2 {
     line-height: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  article > header > h2 {
+    line-height: 1.6rem;
+  }
+  article > header > p {
+    line-height: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  article > header > h2 {
+    line-height: 1.7rem;
+  }
+  article > header > p {
+    line-height: 1.7rem;
   }
 }
 
@@ -141,6 +165,8 @@ img {
 main > figure:nth-child(2) > img:first-child {
   -webkit-transform: rotate(-12deg);
           transform: rotate(-12deg);
+  -o-object-position: -50px 0;
+     object-position: -50px 0;
   width: 100px;
   height: 180px;
   margin-left: 9px;
@@ -167,6 +193,8 @@ img:nth-child(4) {
 img:nth-child(3) {
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
+  -o-object-position: -10px 15px;
+     object-position: -10px 15px;
   width: 120px;
   height: 220px;
   margin-top: 1px;
@@ -182,6 +210,10 @@ img:nth-child(5) {
   margin-left: -14px;
   -webkit-transform: rotate(10deg);
           transform: rotate(10deg);
+}
+
+i {
+  font-family: cursive;
 }
 
 @media screen and (min-width: 375px) {
@@ -203,7 +235,7 @@ article > p:first-of-type {
 }
 
 article > p:first-of-type::first-letter {
-  font-size: 500%;
+  font-size: 540%;
   float: left;
   padding: 0 5px 0 0;
   margin: 0 0 0 -65px;
@@ -219,6 +251,13 @@ p {
   shape-outside: polygon(57px 182px, 90px 192px, 47px 457px, 134px 462px, 119px 560px, 77px 556px, 111px 749px, 75px 951px, -2px 949px, 1px -10px, 52px -11px, 89px 172px);
   height: 200vh;
   width: 150px;
+}
+
+@media screen and (min-width: 425px) {
+  main {
+    width: 425px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -242,18 +281,18 @@ p {
   main > figure:nth-child(2) > img:first-child {
     -webkit-transform: rotate(-12deg);
             transform: rotate(-12deg);
-    width: 150px;
+    width: 160px;
     height: 200px;
     margin-top: -20px;
-    margin-left: 210px;
+    margin-left: 200px;
   }
   img:nth-child(2) {
     -webkit-transform: rotate(9.5deg);
             transform: rotate(9.5deg);
-    width: 150px;
-    height: 350px;
-    margin-top: 1px;
-    margin-left: 198px;
+    width: 155px;
+    height: 360px;
+    margin-top: -12px;
+    margin-left: 193px;
   }
   img:nth-child(4) {
     -webkit-transform: rotate(9.5deg);
@@ -266,6 +305,8 @@ p {
   img:nth-child(3) {
     -webkit-transform: rotate(-10deg);
             transform: rotate(-10deg);
+    -o-object-position: 0 10px;
+       object-position: 0 10px;
     width: 170px;
     height: 250px;
     margin-top: 35px;
@@ -273,9 +314,11 @@ p {
   }
   img:nth-child(5) {
     position: absolute;
+    -o-object-position: 0 10px;
+       object-position: 0 10px;
     z-index: -1;
     width: 190px;
-    height: 195px;
+    height: 200px;
     margin-top: 210px;
     margin-left: 177px;
     -webkit-transform: rotate(10deg);
@@ -312,29 +355,33 @@ p {
   img:nth-child(2) {
     -webkit-transform: rotate(9.5deg);
             transform: rotate(9.5deg);
-    width: 170px;
-    height: 350px;
-    margin-top: 1px;
-    margin-left: 340px;
+    width: 177px;
+    height: 370px;
+    margin-top: -13px;
+    margin-left: 332px;
   }
   img:nth-child(4) {
     -webkit-transform: rotate(9.5deg);
             transform: rotate(9.5deg);
-    width: 180px;
-    height: 135px;
-    margin-top: -360px;
-    margin-left: 378px;
+    width: 190px;
+    height: 140px;
+    margin-top: -375px;
+    margin-left: 368px;
   }
   img:nth-child(3) {
     -webkit-transform: rotate(-10deg);
             transform: rotate(-10deg);
+    -o-object-position: 0 5px;
+       object-position: 0 5px;
     width: 190px;
-    height: 250px;
-    margin-top: 35px;
+    height: 260px;
+    margin-top: 40px;
     margin-left: 332px;
   }
   img:nth-child(5) {
     position: absolute;
+    -o-object-position: 0 10px;
+       object-position: 0 10px;
     z-index: -1;
     width: 190px;
     height: 195px;
